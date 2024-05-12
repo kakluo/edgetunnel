@@ -117,10 +117,10 @@ export default {
 					//const timestamp = Math.floor(now / 1000);
 					const today = new Date(now);
 					today.setHours(0, 0, 0, 0);
-					const UD = Math.floor(((now - today.getTime())/86400000) * 24 * 1099511627776 / 2);
+					const UD = Math.floor(((now - today.getTime())/86400000) * 24 * 1073741824);
 					let pagesSum = UD;
 					let workersSum = UD;
-					let total = 24 * 1099511627776 ;
+					let total = 24 * 1073741824 ;
 					if (env.CFEMAIL && env.CFKEY){
 						const email = env.CFEMAIL;
 						const key = env.CFKEY;
